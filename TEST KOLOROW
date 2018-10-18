@@ -1,0 +1,13 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+int a;
+int main()
+{
+    for(a; a<256; a++){
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),a);
+    cout << a<< ". t e s t\n";
+    }
+    return 0;
+
+}
