@@ -3,6 +3,7 @@
 using namespace std;
 
 int main()
+//w=wyskosc, sp=liczba spacji przed kropka, sp2=liczba spacji po kropce, stsp=storage liczby spacji, pw=polowa wysokosci, l=obecna linijka
 {
     int w, sp, sp2, stsp=-2, pw, l=0;
     cout << "Podaj wysokosc litery A (UWAGA! Wysokosc musi byc parzysta i nie wieksza niz 20.): ";
