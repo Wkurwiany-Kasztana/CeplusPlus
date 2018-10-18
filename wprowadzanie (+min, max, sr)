@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int wpr, minw, maxw;
+float sr, dosr;
+
+int main() {
+    char czyd;
+    czyd='t';
+
+
+    while (czyd =='t'){
+    cout << "Wprowadz liczbe: ";
+    cin >> wpr;
+    dosr=dosr+wpr;
+    if (minw==0) minw=wpr;
+    if (wpr>maxw) maxw=wpr;
+    if (wpr<minw) minw=wpr;
+    cout << "Czy wprowadzac dalej? (T/N)  ";
+    cin >> czyd;
+    sr=(dosr)/2;
+}
+cout << "Max: "<< maxw << endl;
+cout << "Min: "<< minw << endl;
+cout << "Srednia: "<< sr << endl;
+
+return 0;
+
+}
