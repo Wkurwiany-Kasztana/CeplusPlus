@@ -1,0 +1,33 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+int main()
+{
+
+    int wys, gr, sz;
+    cout << "Podaj...\n Wysokosc: "; cin >> wys;
+    cout << "Szerokosc: "; cin >> sz;
+    cout << "  Grubosc: "; cin >> gr;
+
+    if (wys>gr){
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),240);
+    while (wys-gr>0){
+        for(int d=gr; d>0; d--){
+        cout << " ";
+        }
+    wys--;
+    cout << endl;
+    }
+    while (gr>0){
+        for(int a=sz; a>0; a--){
+        cout << " ";
+        }
+    gr--;
+    cout << endl;
+    }
+    }
+    else cout << "Wysokosc musi byc wieksza niz szerokosc!";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+    return 0;
+}
