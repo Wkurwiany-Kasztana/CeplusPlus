@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int w, sp, sp2, stsp=-2, pw, l=0;
+    cout << "Podaj wysokosc litery A (UWAGA! Wysokosc musi byc parzysta i nie wieksza niz 20.): ";
+    cin >> w;
+    if (w%2==0 && w<21) {
+    pw = w/2;
+    while (w>0) {
+        l++;
+        stsp++;
+        sp2=stsp;
+        sp=w;
+        while (sp>0) {
+            cout << " ";
+            sp--;
+        }
+        cout << ".";
+        if (pw==l-1){
+        while (sp2>0){
+        cout << "..";
+        sp2--;
+        }
+        }
+        if (pw!=l-1) {
+        while (sp2>0){
+        cout << "  ";
+        sp2--;
+        }
+        }
+        if (l>1) {
+        cout << "..";
+        }
+    cout << endl;
+    w--;
+
+    }
+    }
+    else cout << "Podales zla liczbe!\n";
+
+    return 0;
+}
+
+//●
