@@ -1,0 +1,79 @@
+#include <iostream>
+
+using namespace std;
+int sp;
+void kreska(int n){
+for(int k=0; k<n; k++)
+    {
+        cout << "/";
+    }
+}
+void spacja(int n){
+for(int k=0; k<n; k++)
+    {
+        cout << " ";
+    }
+}
+
+void litera_k(){
+    sp=3;
+    for (int k=0; k<=3; k++)
+    {
+    kreska(3);
+    spacja(sp);
+    kreska(3);
+    cout<<endl;
+    sp--;
+    }
+    for (int k=0; k<=3; k++)
+    {
+    kreska(3);
+    spacja(sp+1);
+    kreska(3);
+    cout<<endl;
+    sp++;
+    }
+}
+void litera_r(){
+}
+
+void wybor(char n){
+switch (n){
+        case 'k': {
+            litera_k();
+            cout << endl;
+            break;
+        }
+        case '_': {
+            cout << endl << endl << endl;
+            break;
+        }
+        case 'r': {
+        litera_r()
+        cout<<endl;
+        break;
+        }
+    }
+    }
+
+
+int main()
+{
+    char n;
+    cin >> n;
+    wybor(n);void wybor(char n){
+switch (n){
+        case 'k': {
+            litera_k();
+            cout << endl;
+            break;
+        }
+        case '_': {
+            cout << endl << endl << endl;
+            break;
+        }
+    }
+    }
+    return 0;
+}
+
