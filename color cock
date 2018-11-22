@@ -1,0 +1,45 @@
+#include <iostream>
+#include <windows.h>
+#include <time.h>
+
+   int tm_sec;   // seconds of minutes from 0 to 61
+   int tm_min;   // minutes of hour from 0 to 59
+   int tm_hour;  // hours of day from 0 to 24
+
+
+using namespace std;
+
+void kolor(int h, int m, int s)
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),h);
+    cout << h;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+    cout << ":";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),m);
+    cout << m;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+    cout << ":";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),s);
+    cout << s;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+    cout << endl;
+}
+
+int main()
+{
+   // current date/time based on current system
+   time_t now = time(0);
+   tm *ltm = localtime(&now);
+
+   // print various components of tm structure.
+
+   int godz = ltm->tm_hour;
+   int minuty = ltm->tm_min;
+   int sec = ltm->tm_sec;
+
+   kolor (godz, minuty, sec);
+   return 0;
+}
+
+// http://www.jacopocolo.com/hexclock/
+// http://thecolourclock.co.uk/
