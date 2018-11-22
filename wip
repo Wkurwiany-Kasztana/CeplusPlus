@@ -146,19 +146,21 @@ void wybor(char n){
     }
 }
 
-void copis();
-    int ilel;
+void copis(int x){
     char n;
-    cin >> ilel;
-    for (int k=1; k<=ilel; k++)
+    for (x; x>0; x--)
     {
-        cin << n;
+        cin >> n;
         wybor(n);
     }
+}
 
 int main()
 {
-    copis();
+    int ilel;
+    cout << "Ile liter?: ";
+    cin >> ilel;
+    copis(ilel);
 
     return 0;
 }
