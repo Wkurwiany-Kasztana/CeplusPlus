@@ -3,13 +3,13 @@
 using namespace std;
 int sp;
 void kreska(int n){
-for(int k=0; k<n; k++)
+    for(int k=0; k<n; k++)
     {
         cout << "/";
     }
 }
 void spacja(int n){
-for(int k=0; k<n; k++)
+    for(int k=0; k<n; k++)
     {
         cout << " ";
     }
@@ -17,54 +17,125 @@ for(int k=0; k<n; k++)
 
 void litera_k(){
     sp=3;
-    for (int k=0; k<=3; k++)
+    for (int k=1; k<=4; k++)
     {
-    kreska(3);
-    spacja(sp);
-    kreska(3);
-    cout<<endl;
-    sp--;
+        kreska(3);
+        spacja(sp);
+        kreska(3);
+        cout<<endl;
+        sp--;
     }
-    for (int k=0; k<=3; k++)
+    for (int k=1; k<=3; k++)
     {
-    kreska(3);
-    spacja(sp+1);
-    kreska(3);
-    cout<<endl;
-    sp++;
+        kreska(3);
+        spacja(sp+2);
+        kreska(3);
+        cout<<endl;
+        sp++;
     }
 }
 void litera_r(){
+    kreska(8);
+    cout<<endl;
+    for (int k=1; k<=3; k++)
+    {
+        kreska(3);
+        spacja(3);
+        kreska(3);
+        cout<<endl;
+    }
+    sp=0;
+    for (int k=1; k<=3; k++)
+    {
+        sp++;
+        kreska(3);
+        spacja(sp);
+        kreska(3);
+        cout<<endl;
+    }
+}
+
+void litera_s(){
+    kreska(9);
+    cout << endl;
+    for (int k=1; k<=2; k++)
+    {
+        kreska(3);
+        cout <<endl;
+    }
+    kreska(9);
+    cout<<endl;
+    for (int k=1; k<=2; k++)
+    {
+        spacja(6);
+        kreska(3);
+        cout <<endl;
+    }
+    kreska(9);
+}
+
+void litera_y(){
+    sp=3;
+    int sp2=0;
+    for (int k=1; k<=2; k++)
+    {
+        spacja(sp2);
+        kreska(3);
+        spacja(sp);
+        kreska(3);
+        cout<<endl;
+        sp=sp-2;
+        sp2++;
+    }
+    spacja(sp2);
+    kreska(5);
+    cout<<endl;
+    for (int k=1; k<=4; k++)
+    {
+        spacja(3);
+        kreska(3);
+        cout<<endl;
+    }
+}
+
+void litera_z(){
+    kreska(9);
+    cout<<endl;
+    sp=5;
+    for (int k=1; k<=5; k++)
+    {
+        spacja(sp);
+        kreska(3);
+        cout<<endl;
+        sp--;
+    }
+    kreska(9);
 }
 
 void wybor(char n){
-switch (n){
+    switch (n){
         case 'k': {
             litera_k();
             cout << endl;
-            break;
-        }
-        case '_': {
-            cout << endl << endl << endl;
             break;
         }
         case 'r': {
-        litera_r()
-        cout<<endl;
-        break;
+            litera_r();
+            cout << endl;
+            break;
         }
-    }
-    }
-
-
-int main()
-{
-    char n;
-    cin >> n;
-    wybor(n);void wybor(char n){
-switch (n){
-        case 'k': {
-            litera_k();
+        case 's': {
+            litera_s();
+            cout << endl;
+            break;
+        }
+        case 'y': {
+            litera_y();
+            cout << endl;
+            break;
+        }
+        case 'z': {
+            litera_z();
             cout << endl;
             break;
         }
@@ -73,7 +144,21 @@ switch (n){
             break;
         }
     }
-    }
-    return 0;
 }
 
+void copis();
+    int ilel;
+    char n;
+    cin >> ilel;
+    for (int k=1; k<=ilel; k++)
+    {
+        cin << n;
+        wybor(n);
+    }
+
+int main()
+{
+    copis();
+
+    return 0;
+}
