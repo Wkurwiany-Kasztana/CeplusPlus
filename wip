@@ -54,7 +54,6 @@ void litera_r(){
         cout<<endl;
     }
 }
-
 void litera_s(){
     kreska(9);
     cout << endl;
@@ -72,8 +71,8 @@ void litera_s(){
         cout <<endl;
     }
     kreska(9);
+    cout << endl;
 }
-
 void litera_y(){
     sp=3;
     int sp2=0;
@@ -97,7 +96,6 @@ void litera_y(){
         cout<<endl;
     }
 }
-
 void litera_z(){
     kreska(9);
     cout<<endl;
@@ -110,33 +108,29 @@ void litera_z(){
         sp--;
     }
     kreska(9);
+    cout << endl;
 }
 
 void wybor(char n){
     switch (n){
         case 'k': {
             litera_k();
-            cout << endl;
             break;
         }
         case 'r': {
             litera_r();
-            cout << endl;
             break;
         }
         case 's': {
             litera_s();
-            cout << endl;
             break;
         }
         case 'y': {
             litera_y();
-            cout << endl;
             break;
         }
         case 'z': {
             litera_z();
-            cout << endl;
             break;
         }
         case '_': {
@@ -145,22 +139,27 @@ void wybor(char n){
         }
     }
 }
-
 void copis(int x){
-    char n;
-    for (x; x>0; x--)
+    int l;
+    l = x;
+    char lit[l];
+    for (x; x>=1; x--)
     {
-        cin >> n;
-        wybor(n);
+        cin >> lit[x];
+    }
+    x = l;
+    for (x; x>=1; x--)
+    {
+        wybor(lit[x]);
     }
 }
 
 int main()
 {
-    int ilel;
+    int x=5;
     cout << "Ile liter?: ";
-    cin >> ilel;
-    copis(ilel);
+    cin >> x;
+    copis(x);
 
     return 0;
 }
