@@ -1,0 +1,70 @@
+#include <time.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+const int w=3;
+    void Wypelnij_tabelke(int tab[w])
+    {
+        for(int i=0;i<w;i++)
+        {
+            cout<<"Podaj liczbe: ";
+            cin>>tab[i];
+        }
+    }
+
+    void Wypisz_tabelke(int tab[w])
+    {
+        for(int i=0;i<w;i++)
+        {
+            cout<<tab[i]<<" ";
+        }
+        cout << endl;
+    }
+
+    void Losuj(int tab[w])
+    {
+        srand(time(0));
+        for(int i=0;i<w;i++)
+        {
+            tab[i]=rand()%101;
+        }
+    }
+
+    int Suma(int tab1[w], int tab2[w])
+    {
+        int sum=0;
+        for (int i=0; i<w; i++)
+        {
+            sum=sum + tab1[i];
+        }
+
+        for (int i=0; i<w;i++)
+        {
+            sum=sum + tab2[i];
+        }
+    return sum;
+    }
+
+    int Suma2(int tab1[w], int tab2[w])
+    {
+        int sum=0;
+        for (int i=0; i<w; i++)
+        {
+            sum=sum + tab2[i] + tab1[i];
+        }
+    return sum;
+    }
+
+int main()
+{
+
+        int tab[w],tab2[w];
+
+    Wypelnij_tabelke(tab);
+    Wypisz_tabelke(tab);
+    cout<<endl;
+    Losuj(tab2);
+    Wypisz_tabelke(tab2);
+    cout << "\nSuma liczb zgromadzonych w obu tabelach wynosi: " << Suma2(tab,tab2) << "#" << Suma(tab,tab2) << endl;
+return 0;
+}
