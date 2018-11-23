@@ -15,6 +15,105 @@ void spacja(int n){
     }
 }
 
+void litera_a(){
+    spacja(1);
+    kreska(7);
+    cout<<endl;
+        for(int k=1; k<=6; k++)
+        {
+            if (k==3) {
+                kreska(9);
+            }
+            else {
+                kreska(3);
+                spacja(3);
+                kreska(3);
+            }
+            cout<<endl;
+        }
+}
+void litera_b(){
+    kreska(7);
+    cout<<endl;
+    for(int k=1; k<=6; k++)
+    {
+        if (k<=2) {kreska(3); spacja(2); kreska (3);}
+        else if (k==3 || k==6) {kreska(8);}
+        else if (k==4 || k==5) {kreska(3); spacja(3); kreska (3);}
+        cout<<endl;
+    }
+}
+void litera_c(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1 || k==7) {spacja(1); kreska(8);}
+        if (k>=2 && k<=6) {kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_d(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1 || k==7) {kreska(8);}
+        else {kreska(3); spacja(3); kreska (3);}
+        cout<<endl;
+    }
+}
+void litera_e(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1 || k==7) {kreska(9);}
+        else if (k==4) {kreska(6);}
+        else {kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_f(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1) {kreska(9);}
+        else if (k==4) {kreska(6);}
+        else {kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_g(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1) {spacja(1); kreska(8);}
+        else if (k==4) {kreska(3); spacja(1); kreska(5);}
+        else if (k==7) {spacja(1); kreska(7);}
+        else if (k>=2 && k<=3) {kreska(3);}
+        else {kreska(3); spacja(3); kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_h(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==4) {kreska(9);}
+        else {kreska(3); spacja(3); kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_i(){
+    for (int k=1; k<=7; k++)
+    {
+        spacja(3);
+        kreska(3);
+        cout<<endl;
+    }
+}
+void litera_j(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1) {kreska(9);}
+        else if (k>=5 && k<=6) {kreska(3); spacja(3); kreska(3);}
+        else if (k==7) {spacja(1); kreska(7);}
+        else {spacja(6); kreska(3);}
+        cout<<endl;
+    }
+}
 void litera_k(){
     sp=3;
     for (int k=1; k<=4; k++)
@@ -32,6 +131,14 @@ void litera_k(){
         kreska(3);
         cout<<endl;
         sp++;
+    }
+}
+void litera_l(){
+    for (int k=1; k<=3; k++)
+    {
+        if  (k==7) {kreska(9);}
+        else {kreska(3);}
+        cout<<endl;
     }
 }
 void litera_r(){
@@ -113,24 +220,84 @@ void litera_z(){
 
 void wybor(char n){
     switch (n){
+        case 'a': {
+            litera_a();
+            cout<<endl;
+            break;
+        }
+        case 'b': {
+            litera_b();
+            cout<<endl;
+            break;
+        }
+        case 'c': {
+            litera_c();
+            cout<<endl;
+            break;
+        }
+        case 'd': {
+            litera_d();
+            cout<<endl;
+            break;
+        }
+        case 'e': {
+            litera_e();
+            cout<<endl;
+            break;
+        }
+        case 'f': {
+            litera_f();
+            cout<<endl;
+            break;
+        }
+        case 'g': {
+            litera_g();
+            cout<<endl;
+            break;
+        }
+        case 'h': {
+            litera_h();
+            cout<<endl;
+            break;
+        }
+        case 'i': {
+            litera_i();
+            cout<<endl;
+            break;
+        }
+        case 'j': {
+            litera_j();
+            cout<<endl;
+            break;
+        }
         case 'k': {
             litera_k();
+            cout<<endl;
+            break;
+        }
+        case 'l': {
+            litera_l();
+            cout<<endl;
             break;
         }
         case 'r': {
             litera_r();
+            cout<<endl;
             break;
         }
         case 's': {
             litera_s();
+            cout<<endl;
             break;
         }
         case 'y': {
             litera_y();
+            cout<<endl;
             break;
         }
         case 'z': {
             litera_z();
+            cout<<endl;
             break;
         }
         case '_': {
