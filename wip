@@ -134,7 +134,7 @@ void litera_k(){
     }
 }
 void litera_l(){
-    for (int k=1; k<=3; k++)
+    for (int k=1; k<=7; k++)
     {
         if  (k==7) {kreska(9);}
         else {kreska(3);}
