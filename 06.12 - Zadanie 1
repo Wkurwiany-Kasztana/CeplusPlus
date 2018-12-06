@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+const int i = 6;
+int tab[i];
+int x;
+
+void input(){
+
+    for (int n=0; n<i; n++)
+    {
+        cin >> x;
+        tab[n] = x;
+    }
+
+}
+
+void find_max (){
+
+    input();
+    int maximum = 0;
+    int ile_max = 0;
+    for (int n=0; n<i; n++)
+    {
+        if (tab[n] > maximum) maximum = tab[n];
+    }
+
+    for (int n=0; n<i; n++)
+    {
+        if (maximum == tab[n]) ile_max++;
+    }
+
+    cout << "Najwieksza liczba to " << maximum << ", a powtorzyla sie ona " << ile_max << " razy.\n";
+}
+
+int main()
+{
+    find_max();
+
+    return 0;
+}
