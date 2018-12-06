@@ -1,0 +1,74 @@
+#include <time.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+const int w=5;
+    void Wypelnij_tabelke(int tab[w])
+    {
+        for(int i=0;i<w;i++)
+        {
+            cout<<"Podaj liczbe: ";
+            cin>>tab[i];
+        }
+    }
+
+    void Wypisz_tabelke(int tab[w])
+    {
+        for(int i=0;i<w;i++)
+        {
+            cout<<tab[i]<<" ";
+        }
+        cout << endl;
+    }
+
+    void Potega2(int tab[w])
+    {
+        for (int i=0; i<w; i++)
+        {
+            cout << tab[i] * tab[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void Potega3(int tab[w])
+    {
+        for (int i=0; i<w; i++)
+        {
+            cout << tab[i] * tab[i] * tab[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void x2(int tab[w])
+    {
+        for (int i=0; i<w; i++)
+        {
+            cout << tab[i] * 2 << " ";
+        }
+        cout << endl;
+    }
+
+    void przedzial_4_15(int tab[w])
+    {
+        for (int i=0; i<w; i++)
+        {
+            if (tab[i] >= 4 && tab[i] <= 15) cout << tab[i] << " ";
+        }
+    cout << endl;
+    }
+
+int main()
+{
+
+        int tab[w];
+
+    Wypelnij_tabelke(tab);
+    Wypisz_tabelke(tab);
+    Potega2(tab);
+    Potega3(tab);
+    x2(tab);
+    przedzial_4_15(tab);
+    cout<<endl;
+
+return 0;
+}
