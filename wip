@@ -5,7 +5,7 @@ int sp;
 void kreska(int n){
     for(int k=0; k<n; k++)
     {
-        cout << "/";
+        cout << "\\";
     }
 }
 void spacja(int n){
@@ -138,6 +138,18 @@ void litera_l(){
     {
         if  (k==7) {kreska(9);}
         else {kreska(3);}
+        cout<<endl;
+    }
+}
+void litera_n(){
+    for (int k=1; k<=7; k++)
+    {
+        if (k==1 || k==7) {kreska(3); spacja(3); kreska(3);}
+        if (k==2) {kreska(4);spacja(2);kreska(3);}
+        if (k==3) {kreska(5);spacja(1);kreska(3);}
+        if (k==4) {kreska(3);spacja(1);kreska(1);spacja(1);kreska(3);}
+        if (k==5) {kreska(3);spacja(1);kreska(5);}
+        if (k==6) {kreska(3);spacja(2);kreska(4);}
         cout<<endl;
     }
 }
@@ -277,6 +289,11 @@ void wybor(char n){
         }
         case 'l': {
             litera_l();
+            cout<<endl;
+            break;
+        }
+        case 'n': {
+            litera_n();
             cout<<endl;
             break;
         }
