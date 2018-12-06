@@ -1,0 +1,81 @@
+#include <time.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+const int w=19;
+
+    void Wypisz_tabelke(int tab[w])
+    {
+        for(int i=0;i<w;i++)
+        {
+            cout<<tab[i]<<" ";
+        }
+        cout << endl;
+    }
+
+    void Losuj(int tab[w])
+    {
+        srand(time(0));
+        for(int i=0;i<w;i++)
+        {
+            tab[i]=rand()%21;
+        }
+    }
+
+    void find_scnd_biggest(int tab[w])
+    {
+        int max1 = 0;
+        int max2 = 0;
+        int ile_max;
+        for (int i=0; i<w; i++)
+        {
+            if (max1 < tab[i])
+            {
+                max1 = tab[i];
+            }
+            else if (max2 < tab[i] &&  tab[i] != max1)
+            {
+                max2 = tab[i];
+            }
+        }
+        for (int i=0; i<w; i++)
+        {
+            if (max2 == tab[i]) ile_max++;
+        }
+        cout << "Druga najwieksza liczba jest "<< max2 << ", ktora wystapila " << ile_max << " razy. (Najwieksza jest " << max1 << ".)\n";
+    }
+
+    void find_scnd_smolest(int tab[w])
+    {
+        int min1 = 20;
+        int min2 = 20;
+        int ile_min = 0;
+
+        for (int i=0; i<w; i++)
+        {
+            if (min1 > tab[i])
+            {
+                min1 = tab[i];
+            }
+            else if (min2 > tab[i] &&  tab[i] != min1)
+            {
+                min2 = tab[i];
+            }
+        }
+
+        for (int i=0; i<w; i++)
+        {
+            if (min2 == tab[i]) ile_min++;
+        }
+        cout << "Druga najmniejsza liczba jest "<< min2 << ", ktora wystapila " << ile_min << " razy. (Najmniejsza jest " << min1 << ".)\n";
+    }
+
+int main()
+{
+
+    int tab[w];
+    Losuj(tab);
+    Wypisz_tabelke(tab);
+    find_scnd_biggest(tab);
+    find_scnd_smolest(tab);
+}
