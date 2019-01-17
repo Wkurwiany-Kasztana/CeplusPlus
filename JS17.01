@@ -1,0 +1,29 @@
+var sum = 0;
+var t = parseInt(readline());
+while(t)  {
+    sum = sum + t;
+    print(sum);
+    var t = parseInt(readline());
+}
+
+//
+
+deklarowenie zmiennych przy pomocy var
+typeof()
+var zm = "ale super";
+zm.slice(2);
+zm[4];
+zm.toUpperCase();
+zm.toLowerCase();
+operatory matematyczne - + / % *
+zmienna logiczna i operatory logiczne: true || false true && false !
+operatory porównania zm1 == zm2; zm1 === zm2
+for(i=0;i<20;i++){
+    console.log("^.^");
+   
+}
+while(warunek){}
+if (warunek){} else
+console.log("ssss");
+document.getElementById("nazwa").innerHTML = "sssss";
+parseInt()
